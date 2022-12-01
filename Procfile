@@ -1,2 +1,2 @@
+web gunicorn main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 heroku ps:scale web=1
-web uvicorn main:app --host 0.0.0.0 --port 8000
