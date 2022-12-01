@@ -39,7 +39,7 @@ def predic_loan(SK_ID_CURR:int):
     return {'prediction': predicted_proba}
 
 @app.get("/shapplot")
-def predic_loan(SK_ID_CURR:int):
+def force_plot(SK_ID_CURR:int):
     # SK_ID_CURR to X
     dt = data.loc[data['SK_ID_CURR'] == SK_ID_CURR,:]
     X = dt.drop(columns = ['TARGET','SK_ID_CURR'])
